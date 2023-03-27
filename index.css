@@ -10,6 +10,10 @@ body {
      background-attachment: fixed;
      background-size: cover;
      background-position: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
 }
 
 .container {
@@ -17,6 +21,8 @@ body {
      flex-direction: column;
      max-width: 320px;
      margin: 30px auto;
+     background: #0000008f;
+     padding: 2em;
 }
 
 img {
