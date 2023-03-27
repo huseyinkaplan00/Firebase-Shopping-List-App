@@ -63,3 +63,12 @@ function appendItemToShoppingListEl(item) {
 
      shoppingListEl.append(newEl)
 }
+
+//getting random photos
+
+fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&order_by=popular&query=note-list&count=1", { method: "GET" })
+     .then((res) => res.json())
+     .then((data) => {
+          let bg = data[0].urls.full
+          document.body.style.backgroundImage = `url(${bg})`
+     })
