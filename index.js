@@ -15,10 +15,10 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function () {
      let inputValue = inputFieldEl.value
-
-     push(shoppingListInDB, inputValue)
-
-     clearInputFieldEl()
+     if (inputValue) {
+          push(shoppingListInDB, inputValue)
+          clearInputFieldEl()
+     }
 })
 
 onValue(shoppingListInDB, function (snapshot) {
@@ -66,9 +66,13 @@ function appendItemToShoppingListEl(item) {
 
 //getting random photos
 
-fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&query=note-list&count=1", { method: "GET" })
+fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&query=note&count=1", { method: "GET" })
      .then((res) => res.json())
      .then((data) => {
           let bg = data[0].urls.full
           document.body.style.backgroundImage = `url(${bg})`
+     })
+     .catch((err) => {
+          console.log("We cant get api resourse 😒")
+          document.body.style.backgroundImage = `url(${`https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80`})`
      })
