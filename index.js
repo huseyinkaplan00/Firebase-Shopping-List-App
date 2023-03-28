@@ -66,7 +66,7 @@ function appendItemToShoppingListEl(item) {
 
 //getting random photos
 
-fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&query=noteasdasdasd&count=1", { method: "GET" })
+fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&query=note&count=1", { method: "GET" })
      .then((res) => {
           // console.log(res.status)
           // console.log(res.ok)
