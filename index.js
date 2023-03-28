@@ -66,13 +66,21 @@ function appendItemToShoppingListEl(item) {
 
 //getting random photos
 
-fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&query=note&count=1", { method: "GET" })
-     .then((res) => res.json())
+fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0DxcestWfJYO8BlUCSJ50PyGHA&query=noteasdasdasd&count=1", { method: "GET" })
+     .then((res) => {
+          // console.log(res.status)
+          // console.log(res.ok)
+          if (!res.ok) {
+               throw Error("Something Went Wrong With Unsplash API")
+          }
+
+          return res.json()
+     })
      .then((data) => {
-          let bg = data[0].urls.full
+          let bg = data[0].urls.regular
           document.body.style.backgroundImage = `url(${bg})`
      })
      .catch((err) => {
-          console.log("We cant get api resourse 😒")
+          console.log(err)
           document.body.style.backgroundImage = `url(${`https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80`})`
      })
