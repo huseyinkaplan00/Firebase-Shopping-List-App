@@ -82,5 +82,5 @@ fetch("https://api.unsplash.com/photos/random/?client_id=pVVx382GHiGR3xCEd0Dxces
      })
      .catch((err) => {
           console.log(err)
-          document.body.style.backgroundImage = `url(${`https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80`})`
+          document.body.style.backgroundImage = `url(${`https://images.unsplash.com/photo-1611079830811-865ff4428d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0Mjc3NzZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODAwNzk5MDE&ixlib=rb-4.0.3&q=80&w=1080`})`
      })
