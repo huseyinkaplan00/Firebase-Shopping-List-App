@@ -1,6 +1,6 @@
 # Firebase Shopping List App
 
-This repository contains a simple and straightforward shopping list application built with Firebase. 
+This repository contains a simple and straightforward shopping list application built with Firebase. You can access the live application [here](https://huseyinkaplan00.github.io/mobileApp/).
 
 ## Features
 - **Add Items:** Users can add items to the shopping list by entering the name into an input field and clicking on the add button.
